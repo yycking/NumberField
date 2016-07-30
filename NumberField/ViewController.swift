@@ -10,9 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var numberField: NumberField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        numberField.isFloat = true
+        
+        let label = UILabel()
+        label.text = "abc"
+        numberField.helpLabel = label
     }
 
     override func didReceiveMemoryWarning() {

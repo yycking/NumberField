@@ -14,6 +14,7 @@
 		F26F595E1D392A6A005E0F8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F26F595C1D392A6A005E0F8B /* LaunchScreen.storyboard */; };
 		F26F59691D392A6A005E0F8B /* NumberFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26F59681D392A6A005E0F8B /* NumberFieldTests.swift */; };
 		F26F59741D392A6A005E0F8B /* NumberFieldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26F59731D392A6A005E0F8B /* NumberFieldUITests.swift */; };
+		F26F59831D392B5A005E0F8B /* NumberField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26F59821D392B5A005E0F8B /* NumberField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		F26F596F1D392A6A005E0F8B /* NumberFieldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumberFieldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F26F59731D392A6A005E0F8B /* NumberFieldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFieldUITests.swift; sourceTree = "<group>"; };
 		F26F59751D392A6A005E0F8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F26F59821D392B5A005E0F8B /* NumberField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		F26F59521D392A6A005E0F8B /* NumberField */ = {
 			isa = PBXGroup;
 			children = (
+				F26F59811D392A88005E0F8B /* class */,
 				F26F59531D392A6A005E0F8B /* AppDelegate.swift */,
 				F26F59551D392A6A005E0F8B /* ViewController.swift */,
 				F26F59571D392A6A005E0F8B /* Main.storyboard */,
@@ -123,6 +126,14 @@
 				F26F59751D392A6A005E0F8B /* Info.plist */,
 			);
 			path = NumberFieldUITests;
+			sourceTree = "<group>";
+		};
+		F26F59811D392A88005E0F8B /* class */ = {
+			isa = PBXGroup;
+			children = (
+				F26F59821D392B5A005E0F8B /* NumberField.swift */,
+			);
+			name = class;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +272,7 @@
 			files = (
 				F26F59561D392A6A005E0F8B /* ViewController.swift in Sources */,
 				F26F59541D392A6A005E0F8B /* AppDelegate.swift in Sources */,
+				F26F59831D392B5A005E0F8B /* NumberField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +417,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NumberField/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.yyc.NumberField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -416,6 +429,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NumberField/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = app.yyc.NumberField;
 				PRODUCT_NAME = "$(TARGET_NAME)";

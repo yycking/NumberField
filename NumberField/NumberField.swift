@@ -15,9 +15,8 @@ public protocol NumberFieldDelegate: class {
 
 @IBDesignable public class NumberField: UITextField, UITextFieldDelegate {
     public var helpLabel: UILabel?
-    public var isFloat: Bool = false
+    public var isSupportFloat: Bool = false
     public var numberDeledgate: NumberFieldDelegate?
-    public var toolBar: UIToolbar?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -52,20 +51,10 @@ public protocol NumberFieldDelegate: class {
         let helpBar = UIToolbar()
         helpBar.frame.size.height = 44
         helpBar.items = items
-        
-        var height: CGFloat = 0
-        
-        let accessoryView = UIView()
-        if let tool = toolBar {
-            accessoryView.addSubview(tool)
-            height = tool.frame.height
-        }
-        accessoryView.addSubview(helpBar)
-        height += helpBar.frame.height
-        accessoryView.frame.size = CGSizeMake(320, height)
+
         textField.inputAccessoryView = helpBar
         
-        if isFloat {
+        if isSupportFloat {
             textField.keyboardType = UIKeyboardType.DecimalPad
         } else {
             textField.keyboardType = UIKeyboardType.NumberPad
@@ -92,7 +81,7 @@ public protocol NumberFieldDelegate: class {
         
         let scanner: NSScanner = NSScanner(string: newString)
         
-        if isFloat {
+        if isSupportFloat {
             if (scanner.scanDecimal(nil) && scanner.atEnd) == false {
                 return false
             }

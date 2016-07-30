@@ -14,10 +14,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        numberField.isFloat = true
+        numberField.isSupportFloat = true
         
         let label = UILabel()
-        label.text = "abc"
+        label.text = "Help text!"
         numberField.helpLabel = label
     }
 
